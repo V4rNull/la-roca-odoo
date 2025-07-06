@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_persona_form" model="ir.ui.view">
+        <field name="name">la_roca.persona.form</field>
+        <field name="model">la_roca.persona</field>
+        <field name="arch" type="xml">
+            <form string="Persona">
+                <sheet>
+                    <group>
+                        <field name="nombre"/>
+                        <field name="apellido"/>
+                        <field name="fecha_nacimiento"/>
+                        <field name="edad" readonly="1"/>
+                        <field name="ciudad"/>
+                        <field name="telefono"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_persona_tree" model="ir.ui.view">
+        <field name="name">la_roca.persona.tree</field>
+        <field name="model">la_roca.persona</field>
+        <field name="arch" type="xml">
+            <tree string="Personas">
+                <field name="nombre"/>
+                <field name="apellido"/>
+                <field name="edad"/>
+                <field name="ciudad"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_personas" model="ir.actions.act_window">
+        <field name="name">Personas</field>
+        <field name="res_model">la_roca.persona</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_la_roca_root" name="La Roca"/>
+    <menuitem id="menu_personas" name="Personas" parent="menu_la_roca_root" action="action_personas"/>
+</odoo>
+
