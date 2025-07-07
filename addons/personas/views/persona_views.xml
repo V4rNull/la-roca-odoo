@@ -11,6 +11,7 @@
                         <field name="apellido"/>
                         <field name="fecha_nacimiento"/>
                         <field name="edad" readonly="1"/>
+                        <field name="pais_id"/>  <!-- Nuevo campo País -->
                         <field name="ciudad"/>
                         <field name="telefono"/>
                     </group>
@@ -27,6 +28,7 @@
                 <field name="nombre"/>
                 <field name="apellido"/>
                 <field name="edad"/>
+                <field name="pais_id"/>  <!-- Nuevo campo País -->
                 <field name="ciudad"/>
             </tree>
         </field>

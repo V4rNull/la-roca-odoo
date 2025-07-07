@@ -9,6 +9,7 @@ class Persona(models.Model):
     apellido = fields.Char(string='Apellido', required=True)
     fecha_nacimiento = fields.Date(string='Fecha de nacimiento')
     edad = fields.Integer(string='Edad', compute='_compute_edad', store=True)
+    pais_id = fields.Many2one('res.country', string='País')  # <-- nuevo campo País
     ciudad = fields.Char(string='Ciudad')
     telefono = fields.Char(string='Teléfono')
 
