@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_familia,access_familia,model_la_roca_familia,,1,1,1,1
+access_familia_miembro,access_familia_miembro,model_la_roca_familia_miembro,,1,1,1,1
+
