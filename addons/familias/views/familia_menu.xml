@@ -1,5 +1,5 @@
 <odoo>
-    <menuitem id="menu_la_roca_root" name="La Roca" sequence="10"/>
+    <menuitem id="menu_la_roca_root" name="Familias" sequence="10"/>
 
     <menuitem id="menu_familias_root" name="Familias" parent="menu_la_roca_root" sequence="20"/>
 

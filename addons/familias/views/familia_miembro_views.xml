@@ -8,7 +8,6 @@
                     <group>
                         <field name="persona_id"/>
                         <field name="parentesco"/>
-                        <!-- No mostramos familia_id porque se asigna automáticamente -->
                     </group>
                 </sheet>
             </form>
