@@ -1,0 +1,13 @@
+<odoo>
+    <menuitem id="menu_la_roca_root" name="La Roca" sequence="10"/>
+
+    <menuitem id="menu_familias_root" name="Familias" parent="menu_la_roca_root" sequence="20"/>
+
+    <record id="action_familias" model="ir.actions.act_window">
+        <field name="name">Familias</field>
+        <field name="res_model">la_roca.familia</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_familias" name="Familias" parent="menu_familias_root" action="action_familias"/>
+</odoo>

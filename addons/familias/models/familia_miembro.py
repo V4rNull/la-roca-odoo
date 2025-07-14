@@ -14,4 +14,3 @@ class FamiliaMiembro(models.Model):
         ('hermano', 'Hermano/a'),
         ('otro', 'Otro'),
     ], string='Parentesco', required=True)
-

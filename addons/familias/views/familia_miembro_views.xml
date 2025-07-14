@@ -1,0 +1,17 @@
+<odoo>
+    <record id="view_familia_miembro_form" model="ir.ui.view">
+        <field name="name">la_roca.familia.miembro.form</field>
+        <field name="model">la_roca.familia.miembro</field>
+        <field name="arch" type="xml">
+            <form string="Miembro de Familia">
+                <sheet>
+                    <group>
+                        <field name="persona_id"/>
+                        <field name="parentesco"/>
+                        <!-- No mostramos familia_id porque se asigna automáticamente -->
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

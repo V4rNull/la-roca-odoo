@@ -1,0 +1,36 @@
+<odoo>
+    <record id="view_historial_form" model="ir.ui.view">
+        <field name="name">la_roca.historial.form</field>
+        <field name="model">la_roca.historial</field>
+        <field name="arch" type="xml">
+            <form string="Historial">
+                <sheet>
+                    <group>
+                        <field name="persona_id"/>
+                        <field name="fecha"/>
+                        <field name="descripcion"/>
+                        <field name="responsable_id" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_historial_tree" model="ir.ui.view">
+        <field name="name">la_roca.historial.tree</field>
+        <field name="model">la_roca.historial</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="persona_id"/>
+                <field name="fecha"/>
+                <field name="responsable_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_historial" model="ir.actions.act_window">
+        <field name="name">Historial</field>
+        <field name="res_model">la_roca.historial</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

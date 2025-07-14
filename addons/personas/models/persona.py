@@ -1,26 +1,45 @@
 from odoo import models, fields, api
-from datetime import date
 
 class Persona(models.Model):
     _name = 'la_roca.persona'
-    _description = 'Miembro de la Iglesia'
+    _description = 'Persona'
+    _rec_name = 'nombre_completo'
+
+    estado = fields.Selection([
+        ('activo', 'Activo'),
+        ('inactivo', 'Inactivo'),
+        ('nuevo', 'Nuevo'),
+    ], string='Estado', default='activo', required=True)
 
     nombre = fields.Char(string='Nombre', required=True)
     apellido = fields.Char(string='Apellido', required=True)
-    fecha_nacimiento = fields.Date(string='Fecha de nacimiento')
-    edad = fields.Integer(string='Edad', compute='_compute_edad', store=True)
-    pais_id = fields.Many2one('res.country', string='País')  # <-- nuevo campo País
-    ciudad = fields.Char(string='Ciudad')
+    edad = fields.Integer(string='Edad')
     telefono = fields.Char(string='Teléfono')
+    city_id = fields.Many2one('la_roca.city', string='Ciudad')
+    discipulador_id = fields.Many2one('la_roca.persona', string='Discipulador', ondelete='set null')
+    ultimo_registro = fields.Date(string='Último Registro')
 
-    @api.depends('fecha_nacimiento')
-    def _compute_edad(self):
-        for record in self:
-            if record.fecha_nacimiento:
-                hoy = date.today()
-                record.edad = hoy.year - record.fecha_nacimiento.year - (
-                    (hoy.month, hoy.day) < (record.fecha_nacimiento.month, record.fecha_nacimiento.day)
-                )
-            else:
-                record.edad = 0
+    crear_usuario = fields.Boolean(string="¿Crear usuario?")
+    user_id = fields.Many2one('res.users', string='Usuario Vinculado', readonly=True)
 
+    nombre_completo = fields.Char(string='Nombre Completo', compute='_compute_nombre_completo', store=True)
+
+    @api.depends('nombre', 'apellido')
+    def _compute_nombre_completo(self):
+        for rec in self:
+            rec.nombre_completo = f"{rec.nombre or ''} {rec.apellido or ''}".strip()
+
+    @api.model
+    def create(self, vals):
+        record = super().create(vals)
+        if vals.get('crear_usuario'):
+            usuario = self.env['res.users'].create({
+                'name': record.nombre_completo,
+                'login': f"{record.nombre.lower()}.{record.apellido.lower()}",
+                'password': 'temporal123',
+                'groups_id': [(6, 0, [
+                    self.env.ref('personas.group_persona_miembro').id
+                ])]
+            })
+            record.user_id = usuario.id
+        return record

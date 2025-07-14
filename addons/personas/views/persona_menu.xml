@@ -1,0 +1,20 @@
+<odoo>
+    <menuitem id="menu_personas_root" name="Personas"/>
+
+    <record id="action_persona" model="ir.actions.act_window">
+        <field name="name">Personas</field>
+        <field name="res_model">la_roca.persona</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_personas" name="Gestión de Personas" parent="menu_personas_root" action="action_persona"/>
+
+<record id="action_city" model="ir.actions.act_window">
+    <field name="name">Ciudades</field>
+    <field name="res_model">la_roca.city</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+<menuitem id="menu_city" name="Ciudades" parent="menu_personas_root" action="action_city" sequence="20"/>
+
+
+</odoo>

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_la_roca_historial,access_la_roca_historial,model_la_roca_historial,base.group_system,1,1,1,1
+access_la_roca_historial_lider,access_la_roca_historial_lider,model_la_roca_historial,personas.group_persona_lider,1,1,1,0
+access_la_roca_historial_miembro,access_la_roca_historial_miembro,model_la_roca_historial,personas.group_persona_miembro,0,0,0,0

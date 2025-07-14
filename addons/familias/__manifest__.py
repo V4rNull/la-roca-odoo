@@ -8,6 +8,7 @@
     'depends': ['base', 'personas'],
     'data': [
         'security/ir.model.access.csv',
+	'views/familia_menu.xml',
         'views/familia_views.xml',
     ],
     'installable': True,

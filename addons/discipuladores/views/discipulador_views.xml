@@ -1,0 +1,35 @@
+<odoo>
+    <record id="view_discipulador_form" model="ir.ui.view">
+        <field name="name">la_roca.discipulador.form</field>
+        <field name="model">la_roca.discipulador</field>
+        <field name="arch" type="xml">
+            <form string="Discipulador">
+                <sheet>
+                    <group>
+                        <field name="persona_id"/>
+                        <field name="fecha_inicio"/>
+                        <field name="activo"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_discipulador_tree" model="ir.ui.view">
+        <field name="name">la_roca.discipulador.tree</field>
+        <field name="model">la_roca.discipulador</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="persona_id"/>
+                <field name="fecha_inicio"/>
+                <field name="activo"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_discipulador" model="ir.actions.act_window">
+        <field name="name">Discipuladores</field>
+        <field name="res_model">la_roca.discipulador</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

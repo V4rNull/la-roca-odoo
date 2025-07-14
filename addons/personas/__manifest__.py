@@ -1,16 +1,19 @@
+
 {
     'name': 'Personas',
     'version': '1.0',
-    'summary': 'Gestión de personas en el ministerio La Roca',
-    'description': 'Módulo para registrar miembros, discipuladores y relaciones.',
+    'summary': 'Gestión de personas de la iglesia',
+    'category': 'Custom',
     'author': 'Israel Vargas',
-    'category': 'La Roca',
     'depends': ['base'],
     'data': [
+	'security/groups.xml',
         'security/ir.model.access.csv',
         'views/persona_views.xml',
+        'views/persona_menu.xml',
+	'views/city_views.xml',
+        'data/cities.xml',
     ],
     'installable': True,
     'application': True,
 }
-

@@ -1,0 +1,5 @@
+<odoo>
+    <menuitem id="menu_personas_root" name="Personas"/>
+    <menuitem id="menu_persona" name="Gestión de Personas" parent="menu_personas_root"/>
+    <menuitem id="submenu_personas" name="Personas" parent="menu_persona" action="action_persona"/>
+</odoo>

@@ -1,0 +1,8 @@
+<odoo>
+    <menuitem id="menu_bitacora_root" name="Bitácora" sequence="20"/>
+    
+    <menuitem id="menu_bitacora" name="Gestión de Bitácoras"
+              parent="menu_bitacora_root"
+              action="action_bitacora"
+              sequence="10"/>
+</odoo>

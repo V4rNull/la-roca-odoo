@@ -1,0 +1,20 @@
+<odoo>
+    <record id="view_city_tree" model="ir.ui.view">
+        <field name="name">la_roca.city.tree</field>
+        <field name="model">la_roca.city</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_city_form" model="ir.ui.view">
+        <field name="name">la_roca.city.form</field>
+        <field name="model">la_roca.city</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name"/>
+            </form>
+        </field>
+    </record>
+</odoo>

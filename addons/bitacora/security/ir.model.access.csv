@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_la_roca_bitacora,access.la_roca.bitacora,model_la_roca_bitacora,,1,1,1,1

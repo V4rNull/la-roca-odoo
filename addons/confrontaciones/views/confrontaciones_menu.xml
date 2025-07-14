@@ -1,0 +1,6 @@
+<odoo>
+    <menuitem id="menu_confrontaciones_root" name="Confrontaciones" parent="personas.menu_root" sequence="60"/>
+
+    <menuitem id="menu_confrontaciones" name="Gestión de Confrontaciones"
+              parent="menu_confrontaciones_root" action="action_confrontacion"/>
+</odoo>

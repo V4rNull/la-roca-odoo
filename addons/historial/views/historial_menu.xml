@@ -1,0 +1,4 @@
+<odoo>
+    <menuitem id="menu_historial_root" name="Historial" parent="personas.menu_personas" sequence="10"/>
+    <menuitem id="menu_historial" name="Registros" parent="menu_historial_root" action="action_historial"/>
+</odoo>

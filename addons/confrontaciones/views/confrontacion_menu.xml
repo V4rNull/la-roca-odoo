@@ -1,0 +1,4 @@
+<odoo>
+    <menuitem id="menu_confrontacion_root" name="Confrontaciones" sequence="40" />
+    <menuitem id="menu_confrontacion" name="Confrontaciones" parent="menu_confrontacion_root" action="action_confrontacion"/>
+</odoo>

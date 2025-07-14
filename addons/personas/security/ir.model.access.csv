@@ -1,3 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_la_roca_persona_user,access_la_roca_persona_user,model_la_roca_persona,base.group_user,1,1,1,1
-
+access_persona_admin,access_persona_admin,model_la_roca_persona,personas.group_persona_admin,1,1,1,1
+access_persona_lider,access_persona_lider,model_la_roca_persona,personas.group_persona_lider,1,1,1,0
+access_persona_miembro,access_persona_miembro,model_la_roca_persona,personas.group_persona_miembro,1,0,0,0
+access_la_roca_city,access_la_roca_city,model_la_roca_city,base.group_user,1,1,1,1

@@ -1,0 +1,5 @@
+<odoo>
+    <menuitem id="menu_discipuladores_root" name="Discipuladores" sequence="20"/>
+    <menuitem id="menu_discipuladores" name="Gestión de Discipuladores" parent="menu_discipuladores_root"/>
+    <menuitem id="menu_discipulador" name="Discipuladores" parent="menu_discipuladores" action="action_discipulador"/>
+</odoo>
